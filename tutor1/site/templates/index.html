@@ -1,0 +1,11 @@
+{% extends  "layout.html" %}
+
+
+{% block  container  %}
+   <h1> Home  Admin  flask </h2>
+  {%   for message in   get_flashed_messages() %}
+  	{{ message }}
+  {% endfor %}
+
+  <p>Click <a href="{{ url_for('site.logout') }}">here </a> to logout. </p>
+{% endblock %}

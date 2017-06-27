@@ -1,0 +1,20 @@
+{% extends  "layout.html" %}
+
+		
+{% block container %}
+ <h1>  logout alredy   </h1>
+ 
+
+		 {% with messages = get_flashed_messages() %}
+		  {% if messages %}
+		    <ul class=flashes>
+		    {% for message in messages %}
+		      <li>{{ message }}</li>
+		    {% endfor %}
+		    </ul>
+		  {% endif %}
+		{% endwith %}
+
+		<Br> >>  <a href=" {{ url_for('site.login')}} "> Login </a> 
+
+{% endblock %}
